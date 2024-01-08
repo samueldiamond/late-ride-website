@@ -1,53 +1,59 @@
-html,body,text {
+html, body, text {
     margin: auto;
     padding: 4%;
     min-width: auto;
     max-width: 700px;
     background-color: white; 
-        }
- 
+}
+
 body.dark-mode {
     background-color: black;
     color: white;
-        }
-        
-#mode-switch {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-    text-rendering: optimizeLegibility;
-    z-index: 999; /* Ensure it's above other content */
+}
 
-
-        
-    h1 {
-        color: #0096FF;
-        font-family: "Flaco", Helvetica, Arial, sans-serif;
-        font-style: st;
+h1 {
+    color: #0096FF;
+    font-family: "Flaco", Helvetica, Arial, sans-serif;
+    font-style: st;
     font-size: 30;
     font-weight: 2000;
     line-height: 25px;
     text-rendering: optimizeLegibility;
-    }
-    h2 {
-        color: black;
-        font-family: "Flaco", Helvetica, Arial, sans-serif;
+}
+
+h2 {
+    color: black;
+    font-family: "Flaco", Helvetica, Arial, sans-serif;
     font-size: 18;
     font-weight: 500;
     line-height: 25px;
     text-rendering: optimizeLegibility;
-    }
+}
 
-    p {
-        color: black;
-        font-family: "Flaco", Helvetica, Arial, sans-serif;
-        font-size: 16;
-        font-weight: 500;
-        line-height: 25px;
-        text-rendering: optimizeLegibility;
+p {
+    color: black;
+    font-family: "Flaco", Helvetica, Arial, sans-serif;
+    font-size: 16;
+    font-weight: 500;
+    line-height: 25px;
+    text-rendering: optimizeLegibility;
+}
+
+/* Additional styles for dark mode */
+body.dark-mode h1 {
+    color: #00A0FF; /* Adjust the color for h1 in dark mode if needed */
+}
+
+body.dark-mode h2,
+body.dark-mode p {
+    color: #CCCCCC; /* Adjust the color for h2 and p in dark mode if needed */
+}
+
+body.dark-mode a {
+    color: #66B2FF; /* Adjust the color for links in dark mode if needed */
+
+}
+
     }
     @import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700,700i");@font-face {
         font-family: 'Flaco';
