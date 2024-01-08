@@ -24,7 +24,7 @@
 
 <body>
     <div id="mode-switch" onclick="toggleDarkMode()">🌙</div>
-    <h1>Blog Index</h1>
+    <h1>late ride</h1>
     <ul id="blogList"></ul>
 
     <script>
@@ -43,7 +43,7 @@
             blogPosts.forEach(function (post) {
                 var listItem = document.createElement('li');
                 var link = document.createElement('a');
-                link.href = 'blog-posts/' + post;
+                link.href = 'posts/' + post;
                 link.textContent = post.replace('.html', ''); // Display a more user-friendly title
 
                 listItem.appendChild(link);
