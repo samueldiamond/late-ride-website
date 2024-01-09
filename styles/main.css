@@ -6,12 +6,10 @@ body {
 }
 
 .container {
-    max-width: 100%;
     padding: 10% 50%;
 }
 
 .inner-container {
-    max-width: 100%;
     padding: 10% 50%;
 }
 
