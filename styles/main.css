@@ -8,6 +8,10 @@ body {
 .container {
     height: 100vh; /* 100% of viewport height */
     display: flex;
+    max-width: 80%;
+    padding: 25px;
+    align-items: left;
+    justify-content: left;
 }
 
 .inner-container {
