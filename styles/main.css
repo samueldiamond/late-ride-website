@@ -9,9 +9,9 @@ body {
 }
 
 .inner-container {
-    padding: 10% 20%;  /* Adjust these values accordingly */
+    padding: 10% 20%;
+    margin: 0 auto;  /* Center horizontally */
 }
-
 
 h1 {
     font-size: 28px;
@@ -20,6 +20,8 @@ h1 {
 
 ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -38,5 +40,3 @@ a:hover {
     cursor: pointer;
     font-size: 20px;
 }
-
-
