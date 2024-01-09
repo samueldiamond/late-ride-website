@@ -3,14 +3,18 @@ body {
     color: black;
     background-color: white;
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;  /* Reset default body margin */
 }
 
 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Use 100% of the viewport height */
 }
 
 .inner-container {
     padding: 10% 20%;
-    margin: 0 auto;  /* Center horizontally */
 }
 
 h1 {
