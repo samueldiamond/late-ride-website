@@ -15,6 +15,13 @@ body {
 }
 
 
+.inner-container {
+    text-align: left; /* Left-align the text within the container */
+    max-width: 80%;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
 h1 {
     font-size: 28px;
     font-weight: bold;
