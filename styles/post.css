@@ -1,3 +1,4 @@
+/* General styles */
 body {
     font-family: "Helvetica", sans-serif;
     color: black;
@@ -27,9 +28,37 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Date field styles */
+.date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
 /* Dark mode styles */
 body.dark-mode {
     background-color: black;
     color: white;
 }
 
+/* Responsive styles for mobile view */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .date {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+}

@@ -2,28 +2,43 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5ZZ42C1M9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-B5ZZ42C1M9');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Post</title>
+    <title>Post Title</title>
+    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/dark-mode.css">
-    <link rel="stylesheet" href="styles/post.css">
+    <link rel="stylesheet" href="styles/blog-post.css"> <!-- Add a separate CSS file for blog post styles -->
 </head>
 
 <body>
-    <div id="mode-switch" onclick="toggleDarkMode()">🌙</div>
+    <div class="container">
+        <div class="inner-container">
+            <div id="mode-switch" onclick="toggleDarkMode()">🌙</div>
 
-    <article>
-        <h1>Your Blog Post Title</h1>
-
-        <p>
-            Your blog post content goes here. You can add paragraphs, links, and other elements as needed.
-        </p>
-
-        <p>
-            <a href="#">Read more</a>
-        </p>
-    </article>
+            <!-- Blog post content -->
+            <article>
+                <h1 class="post-title">Post Title</h1>
+                <p class="date">Published on <span class="post-date">Date</span></p>
+                <div class="post-content">
+                    <!-- Blog post content goes here -->
+                    <p>This is a sample blog post content.</p>
+                </div>
+            </article>
+        </div>
+    </div>
 
     <script>
         function toggleDarkMode() {
