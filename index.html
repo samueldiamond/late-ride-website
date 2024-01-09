@@ -37,8 +37,11 @@
 
             // Fetch blog post filenames directly
             fetch('posts')  // Assuming 'posts' is the endpoint that returns a list of filenames
-                .then(response => response.json())
-                .then(posts => {
+                .then(response => response.text())
+                .then(data => {
+                    // Split the data into an array of filenames
+                    var posts = data.split('\n').filter(Boolean);
+
                     // Generate list items with links to each blog post
                     posts.forEach(function (post) {
                         var listItem = document.createElement('li');
@@ -49,6 +52,9 @@
                         listItem.appendChild(link);
                         blogList.appendChild(listItem);
                     });
+                })
+                .catch(error => {
+                    console.error('Error fetching blog post filenames:', error);
                 });
         });
 
