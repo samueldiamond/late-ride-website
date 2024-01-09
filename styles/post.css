@@ -1,13 +1,9 @@
-/* Keep your existing styles for blog layout here */
-
-html,
-body,
-text {
-    margin: auto;
-    padding: 4%;
-    min-width: auto;
-    max-width: 700px;
-    background-color: white;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Flaco", Helvetica, Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color change */
+    overflow: hidden; /* Prevent scrolling */
 }
 
 body.dark-mode {
@@ -15,64 +11,82 @@ body.dark-mode {
     color: white;
 }
 
-h1 {
-    color: #0096FF;
-    font-family: "Flaco", Helvetica, Arial, sans-serif;
-    font-style: normal; /* Corrected font-style property */
-    font-size: 30px;
-    font-weight: 200; /* Corrected font-weight property */
-    line-height: 25px;
+#mode-switch {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
     text-rendering: optimizeLegibility;
+    z-index: 999; /* Ensure it's above other content */
+}
+
+.container {
+    height: 100vh; /* 100% of viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-container {
+    text-align: left; /* Left-align the text within the container */
+    max-width: 80%;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 2000;
 }
 
 h2 {
-    color: #0096FF;
-    font-family: "Flaco", Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 25px;
-    text-rendering: optimizeLegibility;
 }
 
 p {
-    color: black;
-    font-family: "Flaco", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 250;
     line-height: 25px;
-    text-rendering: optimizeLegibility;
+    margin-bottom: 15px; /* Add some bottom margin for spacing */
 }
 
-/* Include your @font-face rules for different font weights and styles */
-@font-face {
-    font-family: 'Flaco';
-    src: url("../fonts/FlacoLig/Flaco-Lig.eot");
-    /* ... other src properties ... */
-    font-weight: 400;
-    font-style: normal;
-    text-rendering: optimizeLegibility;
+p a {
+    color: inherit; /* Inherit the color from the parent, so it works in both light and dark modes */
+    text-decoration: underline; /* Add underline to make links distinguishable */
 }
 
-/* Include other @font-face rules as needed */
+/* Additional styles for dark mode */
+body.dark-mode #mode-switch::before {
+    content: '☀️'; /* Sun symbol in dark mode */
+    color: white;
+}
 
-/* Responsive styles for mobile view */
-@media screen and (max-width: 768px) {
-    body {
-        padding: 15px;
-    }
+body:not(.dark-mode) #mode-switch::before {
+    content: '🌙'; /* Moon symbol in light mode */
+    color: black;
+}
+
+body.dark-mode p a {
+    color: white; /* Set the link color to white in dark mode */
+}
+
+@media only screen and (max-width: 750px) {
 
     h1 {
-        font-size: 28px;
-        margin-bottom: 15px;
+        font-size: 30px;
     }
 
     h2 {
         font-size: 16px;
-        margin-bottom: 8px;
+        line-height: 20px;
     }
 
     p {
-        font-size: 14px;
-        margin-bottom: 10px;
+        font-size: 10px;
+        line-height: 20px;
     }
 }
