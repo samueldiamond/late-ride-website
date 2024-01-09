@@ -1,8 +1,4 @@
-/* General styles */
 body {
-    font-family: "Helvetica", sans-serif;
-    color: black;
-    background-color: white;
     padding: 20px; /* Adjust as needed */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -19,23 +15,13 @@ p {
     margin-bottom: 15px;
 }
 
-a {
-    color: #0096FF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Date field styles */
 .date {
     font-size: 14px;
     color: #777;
     margin-bottom: 10px;
 }
 
-/* Dark mode styles */
+/* Dark mode styles for Blog Post */
 body.dark-mode {
     background-color: black;
     color: white;
