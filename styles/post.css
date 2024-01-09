@@ -1,9 +1,13 @@
-body {
-    font-family: "Helvetica", sans-serif;
-    color: black;
+/* Keep your existing styles for blog layout here */
+
+html,
+body,
+text {
+    margin: auto;
+    padding: 4%;
+    min-width: auto;
+    max-width: 700px;
     background-color: white;
-    padding: 20px; /* Adjust as needed */
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.dark-mode {
@@ -11,68 +15,103 @@ body.dark-mode {
     color: white;
 }
 
-#mode-switch {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
+h1 {
+    color: #0096FF;
+    font-family: "Flaco", Helvetica, Arial, sans-serif;
+    font-style: st;
+    font-size: 30px;
+    font-weight: 2000;
+    line-height: 25px;
+    text-rendering: optimizeLegibility;
+}
+
+h2 {
+    color: black;
+    font-family: "Flaco", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    text-rendering: optimizeLegibility;
+}
+
+p {
+    color: black;
+    font-family: "Flaco", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 500;
+    line-height: 25px;
     text-rendering: optimizeLegibility;
-    z-index: 999; /* Ensure it's above other content */
 }
 
-h1.post-title {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
+/* Include your @font-face rules for different font weights and styles */
+
+
 }
 
-p.date {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 10px;
-}
-
-.post-content p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
-
-/* Additional styles for dark mode */
-body.dark-mode #mode-switch::before {
-    content: '☀️'; /* Sun symbol in dark mode */
-    color: white;
-}
-
-body:not(.dark-mode) #mode-switch::before {
-    content: '🌙'; /* Moon symbol in light mode */
-    color: black;
-}
-
-body.dark-mode p a {
-    color: white; /* Set the link color to white in dark mode */
-}
-
-/* Responsive styles for mobile view */
-@media screen and (max-width: 768px) {
-    body {
-        padding: 15px;
     }
+    @import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700,700i");@font-face {
+        font-family: 'Flaco';
+        src: url("../fonts/FlacoLig/Flaco-Lig.eot");
+        src: url("../fonts/FlacoLig/Flaco-Lig.eot?#iefix") format("embedded-opentype"),url("../fonts/FlacoLig/Flaco-Lig.woff") format("woff"),url("../fonts/FlacoLig/Flaco-Lig.ttf") format("truetype"),url("../fonts/FlacoLig/Flaco-Lig.svg#Flaco-Lig") format("svg");
+        font-style: normal;
+        font-weight: 400;
+        text-rendering:optimizeLegibility}
+    
+    @font-face {
+        font-family: 'Flaco';
+        src: url("../fonts/FlacoReg/Flaco-Reg.eot");
+        src: url("../fonts/FlacoReg/Flaco-Reg.eot?#iefix") format("embedded-opentype"),url("../fonts/FlacoReg/Flaco-Reg.woff") format("woff"),url("../fonts/FlacoReg/Flaco-Reg.ttf") format("truetype"),url("../fonts/FlacoReg/Flaco-Reg.svg#Flaco-Reg") format("svg");
+        font-style: normal;
+        font-weight: 500;
+        text-rendering:optimizeLegibility}
+    
+    @font-face {
+        font-family: 'Flaco';
+        src: url("../fonts/webfonts/39F18E_0_0.eot");
+        src: url("../fonts/webfonts/39F18E_0_0.eot?#iefix") format("embedded-opentype"),url("../fonts/webfonts/39F18E_0_0.woff") format("woff"),url("../fonts/webfonts/39F18E_0_0.ttf") format("truetype");
+        font-style: italic;
+        font-weight: 500;
+        text-rendering:optimizeLegibility}
+    
+    @font-face {
+        font-family: 'Flaco';
+        src: url("../fonts/FlacoMedium/Flaco-Medium.eot");
+        src: url("../fonts/FlacoMedium/Flaco-Medium.eot?#iefix") format("embedded-opentype"),url("../fonts/FlacoMedium/Flaco-Medium.woff") format("woff"),url("../fonts/FlacoMedium/Flaco-Medium.ttf") format("truetype"),url("../fonts/FlacoMedium/Flaco-Medium.svg#Flaco-Medium") format("svg");
+        font-style: normal;
+        font-weight: 600;
+        text-rendering:optimizeLegibility}
+    
+    @font-face {
+        font-family: 'Flaco';
+        src: url("../fonts/FlacoBol/Flaco-Bol.eot");
+        src: url("../fonts/FlacoBol/Flaco-Bol.eot?#iefix") format("embedded-opentype"),url("../fonts/FlacoBol/Flaco-Bol.woff") format("woff"),url("../fonts/FlacoBol/Flaco-Bol.ttf") format("truetype"),url("../fonts/FlacoBol/Flaco-Bol.svg#Flaco-Bol") format("svg");
+        font-style: normal;
+        font-weight: 700;
+        text-rendering:optimizeLegibility}
+    
+    @font-face {
+        font-family: 'Flaco';
+        src: url("../fonts/FlacoXBol/Flaco-XBol.eot");
+        src: url("../fonts/FlacoXBol/Flaco-XBol.eot?#iefix") format("embedded-opentype"),url("../fonts/FlacoXBol/Flaco-XBol.woff") format("woff"),url("../fonts/FlacoXBol/Flaco-XBol.ttf") format("truetype"),url("../fonts/FlacoXBol/Flaco-XBol.svg#Flaco-XBol") format("svg");
+        font-style: normal;
+        font-weight: 800;
+        text-rendering:optimizeLegibility}
+    
+    @font-face {
+        font-family: 'Flaco';
+        src: url("../fonts/FlacoHeavy/Flaco-Heavy.eot");
+        src: url("../fonts/FlacoHeavy/Flaco-Heavy.eot?#iefix") format("embedded-opentype"),url("../fonts/FlacoHeavy/Flaco-Heavy.woff") format("woff"),url("../fonts/FlacoHeavy/Flaco-Heavy.ttf") format("truetype"),url("../fonts/FlacoHeavy/Flaco-Heavy.svg#Flaco-Heavy") format("svg");
+        font-style: normal;
+        font-weight: 900;
+        text-rendering:optimizeLegibility}
+    
+    @font-face {
+        font-family: 'Flaco Mono';
+        src: url("../fonts/FlacoMono/FlacoMono-Reg.eot");
+        src: url("../fonts/FlacoMono/FlacoMono-Reg.eot?#iefix") format("embedded-opentype"),url("../fonts/FlacoMono/FlacoMono-Reg.woff") format("woff"),url("../fonts/FlacoMono/FlacoMono-Reg.ttf") format("truetype"),url("../fonts/FlacoMono/FlacoMono-Reg.svg#FlacoMono-Reg") format("svg");
+        font-style: normal;
+        font-weight: normal;
+        text-rendering:optimizeLegibility}
+    
 
-    h1.post-title {
-        font-size: 28px;
-        margin-bottom: 15px;
-    }
-
-    p.date {
-        font-size: 12px;
-        margin-bottom: 8px;
-    }
-
-    .post-content p {
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-}
+        
