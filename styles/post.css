@@ -1,24 +1,27 @@
 body {
+    font-family: "Helvetica", sans-serif;
+    color: black;
+    background-color: white;
     padding: 20px; /* Adjust as needed */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1 {
+h1.post-title {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
-
-.date {
+p.date {
     font-size: 14px;
     color: #777;
     margin-bottom: 10px;
+}
+
+.post-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
 }
 
 /* Dark mode styles for Blog Post */
@@ -33,18 +36,18 @@ body.dark-mode {
         padding: 15px;
     }
 
-    h1 {
+    h1.post-title {
         font-size: 28px;
         margin-bottom: 15px;
     }
 
-    p {
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-
-    .date {
+    p.date {
         font-size: 12px;
         margin-bottom: 8px;
+    }
+
+    .post-content p {
+        font-size: 14px;
+        margin-bottom: 10px;
     }
 }
