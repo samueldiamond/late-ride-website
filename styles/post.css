@@ -20,6 +20,7 @@ body.dark-mode {
     font-weight: 500;
     text-rendering: optimizeLegibility;
     z-index: 999; /* Ensure it's above other content */
+}
 
 h1.post-title {
     font-size: 36px;
@@ -39,7 +40,6 @@ p.date {
     margin-bottom: 15px;
 }
 
-
 /* Additional styles for dark mode */
 body.dark-mode #mode-switch::before {
     content: '☀️'; /* Sun symbol in dark mode */
@@ -54,7 +54,6 @@ body:not(.dark-mode) #mode-switch::before {
 body.dark-mode p a {
     color: white; /* Set the link color to white in dark mode */
 }
-
 
 /* Responsive styles for mobile view */
 @media screen and (max-width: 768px) {
