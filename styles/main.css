@@ -48,6 +48,9 @@ ul {
     text-decoration: underline; /* Add underline to make links distinguishable */
 }
 
+body.dark-mode p a ul {
+    color: white; /* Set the link color to white in dark mode */
+
 a {
     text-decoration: none;
     color: #0096FF;
