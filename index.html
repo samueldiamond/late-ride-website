@@ -36,7 +36,7 @@
             var blogList = document.getElementById('blogList');
 
             // Array of blog post filenames
-            var blogPosts = [
+            var blogList = [
                 'Here is an example Of A Post Yet To Be Written.html',
                 'post2.html',
                 'post3.html'
@@ -44,7 +44,7 @@
             ];
 
             // Generate list items with links to each blog post
-            blogPosts.forEach(function (post) {
+            blogList.forEach(function (post) {
                 var listItem = document.createElement('li');
                 var link = document.createElement('a');
                 link.href = 'posts/' + post;
