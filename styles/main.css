@@ -5,6 +5,19 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.container {
+    height: 100vh; /* 100% of viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-container {
+    text-align: left; /* Left-align the text within the container */
+    max-width: 80%;
+    padding: 25px;
+    box-sizing: border-box;
+
 h1 {
     font-size: 28px;
     font-weight: bold;
