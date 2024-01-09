@@ -24,29 +24,32 @@
 
 <body>
     <div class="container">
-    <div class="inner-container">
-    <div id="mode-switch" onclick="toggleDarkMode()">🌙</div>
-    <h1>late ride</h1>
-    <ul id="blogList"></ul>
-</div>
-</div>
+        <div class="inner-container">
+            <div id="mode-switch" onclick="toggleDarkMode()">🌙</div>
+            <h1>late ride</h1>
+            <ul id="blogList"></ul>
+        </div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var blogList = document.getElementById('blogList');
 
+            // Fetch blog post filenames directly
+            fetch('posts')  // Assuming 'posts' is the endpoint that returns a list of filenames
+                .then(response => response.json())
+                .then(posts => {
+                    // Generate list items with links to each blog post
+                    posts.forEach(function (post) {
+                        var listItem = document.createElement('li');
+                        var link = document.createElement('a');
+                        link.href = 'posts/' + post;
+                        link.textContent = post.replace('.html', ''); // Display a more user-friendly title
 
-
-            // Generate list items with links to each blog post
-            blogList.forEach(function (post) {
-                var listItem = document.createElement('li');
-                var link = document.createElement('a');
-                link.href = 'posts/' + post;
-                link.textContent = post.replace('.html', ''); // Display a more user-friendly title
-
-                listItem.appendChild(link);
-                blogList.appendChild(listItem);
-            });
+                        listItem.appendChild(link);
+                        blogList.appendChild(listItem);
+                    });
+                });
         });
 
         function toggleDarkMode() {
