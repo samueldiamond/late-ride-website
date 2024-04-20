@@ -16,7 +16,7 @@ body {
 }
 
 .inner-container {
-    text-align: left; /* Left-align the text within the container */
+    text-align: center; /* Left-align the text within the container */
     max-width: 80%;
     padding: 100px;
     box-sizing: border-box;
