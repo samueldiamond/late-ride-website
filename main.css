@@ -43,6 +43,11 @@ p {
     -webkit-font-smoothing: antialiased;
 }
 
+a {
+    text-decoration: none;
+    color: blue;
+  }
+
 /* Media Query for smaller screens/mobile */
 @media screen and (max-width: 768px) {
     .inner-container {
