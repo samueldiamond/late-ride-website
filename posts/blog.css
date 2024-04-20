@@ -40,4 +40,13 @@ p {
     line-height: 150%;
     -webkit-font-smoothing: antialiased;
 }
+
+/* Media Query for smaller screens/mobile */
+@media screen and (max-width: 768px) {
+    .inner-container {
+        padding: 20px; /* Adjust padding for smaller screens */
+        max-width: 70%; /* Set a percentage for maximum width on smaller screens */
+    }
+
+}
 }
