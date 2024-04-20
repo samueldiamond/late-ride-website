@@ -45,6 +45,7 @@ p {
 }
 
 a {
+    font-family: arial;
     text-decoration: none;
     color: blue;
   }
