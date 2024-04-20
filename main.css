@@ -37,8 +37,9 @@ h2 {
 }
 
 p {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 16px; /* Increase font size for better readability */
+    font-weight: 250;
+    line-height: 150%;
     -webkit-font-smoothing: antialiased;
 }
 
