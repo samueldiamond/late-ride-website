@@ -24,7 +24,6 @@
 <body>
     <div class="container">
         <div class="inner-container">
-            <div id="mode-switch" onclick="toggleDarkMode()">🌙</div>
             <h1>late ride</h1>
             <ul id="blogList">
                 <li><a href="posts/Here is an example Of A Post Yet To Be Written.html">Here is an example of a blogpost yet to be written</a></li>
@@ -35,13 +34,6 @@
         </div>
     </div>
 
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-            var modeSwitch = document.getElementById('mode-switch');
-            modeSwitch.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-        }
-    </script>
 </body>
 
 </html>
