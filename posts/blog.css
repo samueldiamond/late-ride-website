@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "lora", serif;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color change */
+    overflow-y: scroll; /* Allow vertical scrolling */
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+.inner-container {
+    text-align: justify; /* Left-align the text within the container */
+    max-width: 30vw;
+    min-width: 25vw;
+}
+
+h1 {
+    font-family: "arial", serif;
+    font-size: 18px; /* Increase font size for better readability */
+    font-weight: 2000;
+    font-style: strong;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+    font-size: 20px; /* Increase font size for better readability */
+    font-weight: 500;
+    line-height: 25px;
+    -webkit-font-smoothing: antialiased;
+}
+p {
+    font-size: 16px; /* Increase font size for better readability */
+    font-weight: 250;
+    line-height: 150%;
+    -webkit-font-smoothing: antialiased;
+}

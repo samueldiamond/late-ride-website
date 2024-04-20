@@ -8,7 +8,8 @@ body {
 }
 
 .container {
-    height: 50vh; /* 100% of viewport height */
+    height: 40vh; /* 100% of viewport height */
+    padding: 1vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,31 +39,27 @@ h2 {
 p {
     font-size: 12px;
     font-weight: 250;
-    line-height: 25px;
-    margin-bottom: 15px; /* Add some bottom margin for spacing */
     -webkit-font-smoothing: antialiased;
 }
 
-p a {
-    color: inherit; /* Inherit the color from the parent, so it works in both light and dark modes */
-    text-decoration: underline; /* Add underline to make links distinguishable */
-    -webkit-font-smoothing: antialiased;
-}
-
-
-@media only screen and (max-width: 750px) {
+/* Media Query for smaller screens/mobile */
+@media screen and (max-width: 768px) {
+    .inner-container {
+        padding: 20px; /* Adjust padding for smaller screens */
+        padding-top: 100px; /* Ensure top padding remains consistent */
+    }
 
     h1 {
-        font-size: 30px;
+        font-size: 30px; /* Adjust font size for smaller screens */
     }
 
     h2 {
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 16px; /* Adjust font size for smaller screens */
+        line-height: 20px; /* Adjust line height for smaller screens */
     }
 
     p {
-        font-size: 10px;
-        line-height: 20px;
+        font-size: 12px; /* Keep font size the same for smaller screens */
     }
 }
+
