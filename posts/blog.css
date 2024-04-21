@@ -20,8 +20,8 @@ body {
 }
 
 h1 {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 36px; /* Increase font size for better readability */
+    font-family: "lora", serif;
+    font-size: 40px; /* Increase font size for better readability */
     font-weight: 2000;
     font-style: strong;
     -webkit-font-smoothing: antialiased;
