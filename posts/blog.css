@@ -33,6 +33,7 @@ h1 {
 }
 
 h2 {
+    font-family: "arial", serif;
     font-size: 20px; /* Increase font size for better readability */
     font-weight: 1000;
     line-height: 25px;
