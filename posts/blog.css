@@ -15,20 +15,20 @@ body {
 }
     
 .inner-container {
+    padding-top: 20px;
     text-align: justify; /* Left-align the text within the container */
     width: 450px;
 }
 
 h1 {
-    font-family: "lora", serif;
-    font-size: 40px; /* Increase font size for better readability */
-    font-weight: 2000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px; /* Increase font size for better readability */
+    font-weight: 250;
     font-style: strong;
     -webkit-font-smoothing: antialiased;
 }
 
 h2 {
-    font-family: "Times New Roman", Times, serif;
     font-size: 18px; /* Increase font size for better readability */
     font-weight: 250;
     -webkit-font-smoothing: antialiased;
