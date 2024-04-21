@@ -25,7 +25,7 @@ body {
 
 h1 {
     font-family: "arial", serif;
-    font-size: 18px; /* Increase font size for better readability */
+    font-size: 20px; /* Increase font size for better readability */
     font-weight: 2000;
     font-style: strong;
     letter-spacing: -0.01em;
@@ -34,12 +34,12 @@ h1 {
 
 h2 {
     font-size: 20px; /* Increase font size for better readability */
-    font-weight: 500;
+    font-weight: 1000;
     line-height: 25px;
     -webkit-font-smoothing: antialiased;
 }
 p {
-    font-size: 16px; /* Increase font size for better readability */
+    font-size: 18px; /* Increase font size for better readability */
     font-weight: 250;
     line-height: 150%;
     -webkit-font-smoothing: antialiased;
