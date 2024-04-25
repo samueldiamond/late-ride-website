@@ -51,6 +51,21 @@ a {
     color: blue;
   }
 
+  /* Additional styles for dark mode */
+body.dark-mode #mode-switch::before {
+    content: 'LIGHT'; /* Sun symbol in dark mode */
+    color: white;
+}
+
+body:not(.dark-mode) #mode-switch::before {
+    content: 'DARK'; /* Moon symbol in light mode */
+    color: black;
+}
+
+body.dark-mode p a {
+    color: #6495ED; /* Set the link color to white in dark mode */
+}
+
 /* Media Query for smaller screens/mobile */
 @media screen and (max-width: 768px) {
     .inner-container {

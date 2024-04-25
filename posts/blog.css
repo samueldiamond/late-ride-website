@@ -7,6 +7,21 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+#mode-switch {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    text-rendering: optimizeLegibility;
+    z-index: 999; /* Ensure it's above other content */
+}
 
 .container {
     display: flex;
@@ -23,8 +38,7 @@ body {
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px; /* Increase font size for better readability */
-    font-weight: 250;
-    font-style: strong;
+    font-weight: bold;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -38,6 +52,21 @@ p {
     font-weight: 250;
     line-height: 150%;
     -webkit-font-smoothing: antialiased;
+}
+
+/* Additional styles for dark mode */
+body.dark-mode #mode-switch::before {
+    content: 'LIGHT'; /* Sun symbol in dark mode */
+    color: white;
+}
+
+body:not(.dark-mode) #mode-switch::before {
+    content: 'DARK'; /* Moon symbol in light mode */
+    color: black;
+}
+
+body.dark-mode p a {
+    color: #6495ED; /* Set the link color to white in dark mode */
 }
 
 /* Media Query for smaller screens/mobile */
