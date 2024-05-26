@@ -17,9 +17,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>late ride</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon yellow.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicon yellow.ico">
     <!-- Link to your CSS file -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="blog.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
         </style>
@@ -27,18 +27,23 @@
 
 <body>
     <div class="container">
+        <div id="mode-switch"></div>
         <div class="inner-container">
-            <h1>late ride</h1>
+            <h1>25.04.2024</h1>
          <p>
-            <a href="posts/25042024.html">25.04.2024</a><br>
-            <a href="posts/24042024.html">24.04.2024</a><br>
-            <a href="posts/21042024.html">21.04.2024</a><br>
-            <a href="posts/20042024.html">20.04.2024</a><br>
-            <a href="posts/26062024.html">20.04.2024</a><br>
-                <!-- Add more items as needed -->
-            </p>
-        </div>
+            All I do is play chess on my phone and try not to think. I measure time in milligrams of caffeine consumed and intensity of cardiac strain and severity of muscular hypertrophy. I am very tired.</div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var modeSwitch = document.getElementById('mode-switch');
+            modeSwitch.addEventListener('click', toggleDarkMode);
+
+            function toggleDarkMode() {
+                document.body.classList.toggle('dark-mode');
+            }
+        });
+    </script>
 
 </body>
 
