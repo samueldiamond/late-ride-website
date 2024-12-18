@@ -19,6 +19,7 @@ body {
 .inner-container {
     text-align: center; /* Left-align the text within the container */
     max-width: 80%;
+    padding-top: 60px; 
     padding: 100px;
     box-sizing: border-box;
 }
