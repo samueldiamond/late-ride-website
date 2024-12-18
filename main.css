@@ -50,9 +50,9 @@ a {
     font-family: arial;
     text-decoration: none;
     color: blue;
-  }
+}
 
-  /* Additional styles for dark mode */
+/* Additional styles for dark mode */
 body.dark-mode #mode-switch::before {
     content: 'LIGHT'; /* Sun symbol in dark mode */
     color: white;
@@ -69,9 +69,12 @@ body.dark-mode p a {
 
 /* Media Query for smaller screens/mobile */
 @media screen and (max-width: 768px) {
+    .container {
+        padding-top: 20px; /* Ensure consistent top padding for mobile views */
+    }
+
     .inner-container {
         padding: 20px; /* Adjust padding for smaller screens */
-        padding-top: 100px; /* Ensure top padding remains consistent */
     }
 
     h1 {
@@ -87,4 +90,3 @@ body.dark-mode p a {
         font-size: 12px; /* Keep font size the same for smaller screens */
     }
 }
-
