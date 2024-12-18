@@ -10,7 +10,7 @@ body {
 .container {
     height: 40vh; /* 100% of viewport height */
     padding: 1vh;
-    padding-top: 20px; 
+    padding-top: 60px; 
     display: flex;
     align-items: center;
     justify-content: center;
