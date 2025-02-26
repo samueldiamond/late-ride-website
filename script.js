@@ -25,16 +25,145 @@ document.addEventListener("DOMContentLoaded", function() {
     const items = document.querySelectorAll('.item');
 
     playButtons.forEach(button => {
-        button.addEventListener("click", function() {
-            const panel = this.nextElementSibling;
-            const iframe = panel.querySelector("iframe");
+        button.addEventListener('click', function() {
+            const releaseItem = this.closest('.release');
+            const panel = releaseItem.querySelector('.panel');
             
-            if (panel.style.display === "none" || panel.style.display === "") {
-                panel.style.display = "block";
-                iframe.style.display = "block";
+            // Toggle accordion
+            panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+            
+            // Handle custom player if it exists
+            const customPlayer = panel.querySelector('.custom-player');
+            if (customPlayer) {
+                const audio = panel.querySelector('audio');
+                if (!audio) {
+                    console.error('Audio element not found');
+                    return;
+                }
+
+                const playBtn = customPlayer.querySelector('.play');
+                const prevBtn = customPlayer.querySelector('.prev-track');
+                const nextBtn = customPlayer.querySelector('.next-track');
+                const progress = customPlayer.querySelector('.progress');
+                const progressBar = customPlayer.querySelector('.progress-bar');
+                const currentTrack = customPlayer.querySelector('.current-track');
+                const timeDisplay = customPlayer.querySelector('.time');
+                const mainPlayButton = this;  // Store reference to main play button
+                
+                const updatePlayButtonStates = (isPlaying) => {
+                    const playIcon = isPlaying ? '❚❚' : '▶';
+                    const playText = isPlaying ? '❚❚ playing' : '▶ play';
+                    playBtn.textContent = playIcon;
+                    mainPlayButton.textContent = playText;
+                };
+                
+                // Initialize player if not already done
+                if (!audio.initialized) {
+                    let currentTrackIndex = 0;
+                    const sources = Array.from(audio.getElementsByTagName('source'));
+                    
+                    if (sources.length === 0) {
+                        console.error('No audio sources found');
+                        return;
+                    }
+
+                    const updateTrackInfo = () => {
+                        const trackName = sources[currentTrackIndex].src.split('/').pop().split('.')[0];
+                        currentTrack.textContent = `${currentTrackIndex + 1}. ${trackName.split('_').pop()}`;
+                    };
+
+                    // Set initial audio source
+                    audio.src = sources[0].src;
+                    
+                    // Main play button in custom player
+                    playBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        if (audio.paused) {
+                            audio.play().then(() => {
+                                updatePlayButtonStates(true);
+                            }).catch(e => console.error('Error playing audio:', e));
+                        } else {
+                            audio.pause();
+                            updatePlayButtonStates(false);
+                        }
+                    });
+
+                    prevBtn.addEventListener('click', () => {
+                        currentTrackIndex = (currentTrackIndex - 1 + sources.length) % sources.length;
+                        audio.src = sources[currentTrackIndex].src;
+                        updateTrackInfo();
+                        audio.play().then(() => {
+                            updatePlayButtonStates(true);
+                        });
+                    });
+                    
+                    nextBtn.addEventListener('click', () => {
+                        currentTrackIndex = (currentTrackIndex + 1) % sources.length;
+                        audio.src = sources[currentTrackIndex].src;
+                        updateTrackInfo();
+                        audio.play().then(() => {
+                            updatePlayButtonStates(true);
+                        });
+                    });
+                    
+                    audio.addEventListener('ended', () => {
+                        currentTrackIndex = (currentTrackIndex + 1) % sources.length;
+                        audio.src = sources[currentTrackIndex].src;
+                        updateTrackInfo();
+                        audio.play().then(() => {
+                            updatePlayButtonStates(true);
+                        });
+                    });
+
+                    audio.addEventListener('pause', () => {
+                        updatePlayButtonStates(false);
+                    });
+
+                    audio.addEventListener('play', () => {
+                        updatePlayButtonStates(true);
+                    });
+                    
+                    updateTrackInfo();
+                    audio.initialized = true;
+                }
+
+                // Store the updatePlayButtonStates function on the audio element
+                audio.updatePlayButtonStates = updatePlayButtonStates;
+
+                // Handle the initial play button click
+                if (audio.paused) {
+                    audio.play().then(() => {
+                        updatePlayButtonStates(true);
+                    }).catch(e => console.error('Error playing audio:', e));
+                } else {
+                    audio.pause();
+                    updatePlayButtonStates(false);
+                }
             } else {
-                panel.style.display = "none";
-                iframe.style.display = "none";
+                // Handle iframe embeds
+                const iframe = panel.querySelector('iframe');
+                if (iframe) {
+                    iframe.style.display = iframe.style.display === 'block' ? 'none' : 'block';
+                }
+            }
+        });
+    });
+
+    // Add click handler for all play buttons in the custom player
+    document.querySelectorAll('.custom-player .play').forEach(playBtn => {
+        playBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const customPlayer = this.closest('.custom-player');
+            const audio = customPlayer.querySelector('audio');
+            const mainPlayButton = this.closest('.release').querySelector('.play-button');
+
+            if (audio.paused) {
+                audio.play().then(() => {
+                    audio.updatePlayButtonStates(true);
+                }).catch(e => console.error('Error playing audio:', e));
+            } else {
+                audio.pause();
+                audio.updatePlayButtonStates(false);
             }
         });
     });
