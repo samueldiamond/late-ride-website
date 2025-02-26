@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #d6d6f6;
+    color: #3737ff;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    font-size: 24px;
+}
+
+nav a {
+    color: #3737ff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.release, .mix {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    background: #efefff;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #3737ff;
+}
+
+.accordion {
+    cursor: pointer;
+    padding: 10px;
+    background: #c3c3ff;
+    border: none;
+    text-align: left;
+    width: 100%;
+    color: #3737ff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.play-button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #b3b3ff;
+    border: none;
+    color: #3737ff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.play-button:hover {
+    background: #9999ff;
+}
+
+.panel {
+    display: none;
+    margin-top: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
