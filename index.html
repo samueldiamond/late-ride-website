@@ -12,34 +12,71 @@
         <img src="logo.png" alt="late ride logo" class="logo">
         <h1>late ride</h1>
         <nav>
-            <a href="#releases">releases</a>
-            <a href="#mixes">mixes</a>
+            <a href="#music">music</a>
             <a href="#contact">contact</a>
         </nav>
     </header>
     
     <main>
-        <section id="releases">
-            <h2>releases</h2>
-            <div class="release">
-                <h3 class="accordion">release title</h3>
-                <p>artist - date</p>
-                <button class="play-button">▶ play</button>
-                <div class="panel">
-                    <iframe style="border: 0; width: 100%; height: 120px; display: none;" src="https://bandcamp.com/EmbeddedPlayer/..." seamless></iframe>
-                </div>
+        <section id="music">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">all</button>
+                <button class="filter-btn" data-filter="release">releases</button>
+                <button class="filter-btn" data-filter="mix">mixes</button>
             </div>
-        </section>
-        
-        <section id="mixes">
-            <h2>mixes</h2>
-            <div class="mix">
-                <h3 class="accordion">mix title</h3>
-                <p>dj name - date</p>
-                <button class="play-button">▶ play</button>
-                <div class="panel">
-                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=..." style="display: none;"></iframe>
-                </div>
+            
+            <div class="music-container">
+                <section id="releases">
+                    <h2>releases</h2>
+                    <div class="item release">
+                        <h3 class="accordion">heaven</h3>
+                        <p>open credit - 2024</p>
+                        <button class="play-button">▶ play</button>
+                        <div class="panel">
+                            <div class="custom-player">
+                                <div class="track-info">
+                                    <span class="current-track">1. heaven</span>
+                                    <span class="time">0:00 / 0:00</span>
+                                </div>
+                                <audio id="heaven-player">
+                                    <source src="audio/RIDE001 - open credit - heaven/RIDE001_open-credit_heaven_01_heaven.mp3" type="audio/mpeg">
+                                    <source src="audio/RIDE001 - open credit - heaven/RIDE001_open-credit_heaven_02_guided.mp3" type="audio/mpeg">
+                                    <source src="audio/RIDE001 - open credit - heaven/RIDE001_open-credit_heaven_03_shadow.mp3" type="audio/mpeg">
+                                    <source src="audio/RIDE001 - open credit - heaven/RIDE001_open-credit_heaven_04_jammy.mp3" type="audio/mpeg">
+                                </audio>
+                                <div class="progress-bar">
+                                    <div class="progress"></div>
+                                </div>
+                                <div class="controls">
+                                    <button class="prev-track">←</button>
+                                    <button class="play">▶</button>
+                                    <button class="next-track">→</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="release">
+                        <h3 class="accordion">release title</h3>
+                        <p>artist - date</p>
+                        <button class="play-button">▶ play</button>
+                        <div class="panel">
+                            <iframe style="border: 0; width: 100%; height: 120px; display: none;" src="https://bandcamp.com/EmbeddedPlayer/..." seamless></iframe>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="mixes">
+                    <h2>mixes</h2>
+                    <div class="mix">
+                        <h3 class="accordion">mix title</h3>
+                        <p>dj name - date</p>
+                        <button class="play-button">▶ play</button>
+                        <div class="panel">
+                            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=..." style="display: none;"></iframe>
+                        </div>
+                    </div>
+                </section>
             </div>
         </section>
     </main>
