@@ -47,7 +47,7 @@ function renderPost(postId) {
         return;
     }
     
-    document.getElementById('site-title').innerHTML = `<a href="#" class="back-link">← all writing</a>`;
+    document.getElementById('site-title').innerHTML = `<a href="#" class="back-link">← sam's thoughts</a>`;
     
     // Simple markdown-like parsing
     const content = post.content
