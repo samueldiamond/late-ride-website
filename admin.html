@@ -301,6 +301,14 @@ Even more content."></textarea>
     
     <div id="code-output" class="code-output" style="display: none;"></div>
     <div id="preview" class="preview" style="display: none;"></div>
+    
+    <div id="full-file-output" class="code-output" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <strong>Complete js/posts.js file:</strong>
+            <button onclick="copyFullFile()" style="padding: 8px 16px; font-size: 12px; background: #007bff;">Copy Full File</button>
+        </div>
+        <pre id="full-file-content"></pre>
+    </div>
 
     <script src="js/posts.js"></script>
     <script>
@@ -423,12 +431,53 @@ Even more content."></textarea>
         
         // Generate full posts.js code
         function generateFullCode() {
-            const codeOutput = document.getElementById('code-output');
-            codeOutput.style.display = 'block';
-            codeOutput.textContent = `// Replace the entire blogPosts array in js/posts.js with this:
+            const fullFileOutput = document.getElementById('full-file-output');
+            const fullFileContent = document.getElementById('full-file-content');
+            
+            const fileContent = `// Blog posts data
+// To add a new post, simply add an object to this array
+// Posts are automatically sorted by date (newest first)
 
 let blogPosts = ${JSON.stringify(blogPosts, null, 4)};`;
-            codeOutput.scrollIntoView({ behavior: 'smooth' });
+            
+            fullFileContent.textContent = fileContent;
+            fullFileOutput.style.display = 'block';
+            fullFileOutput.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Copy full file to clipboard
+        function copyFullFile() {
+            const content = document.getElementById('full-file-content').textContent;
+            
+            navigator.clipboard.writeText(content).then(() => {
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.style.background = '#28a745';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '#007bff';
+                }, 2000);
+            }).catch(err => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = content;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.style.background = '#28a745';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '#007bff';
+                }, 2000);
+            });
         }
         
         function generatePost() {
@@ -451,22 +500,13 @@ let blogPosts = ${JSON.stringify(blogPosts, null, 4)};`;
             
             blogPosts.unshift(newPost);
             
-            const codeOutput = document.getElementById('code-output');
-            codeOutput.style.display = 'block';
-            codeOutput.textContent = `// Add this object to the beginning of the blogPosts array in js/posts.js:
-
-${JSON.stringify(newPost, null, 4)},
-
-// Or replace the entire array with this:
-
-let blogPosts = ${JSON.stringify(blogPosts, null, 4)};`;
-            
             // Clear form
             document.getElementById('post-title').value = '';
             document.getElementById('post-content').value = '';
             document.getElementById('post-date').value = new Date().toISOString().split('T')[0];
             
-            codeOutput.scrollIntoView({ behavior: 'smooth' });
+            // Generate the full file for easy copying
+            generateFullCode();
         }
         
         function previewPost() {
