@@ -23,7 +23,7 @@ function getExcerpt(content, maxLength = 200) {
 
 // Render index page
 function renderIndex() {
-    document.getElementById('site-title').textContent = 'all writing';
+    document.getElementById('site-title').textContent = "sam's thoughts";
     
     // Sort posts by date (newest first)
     const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
