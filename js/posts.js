@@ -4,6 +4,12 @@
 
 let blogPosts = [
     {
+        "id": "1756452319632",
+        "title": "11",
+        "date": "2025-08-28",
+        "content": "When I was eleven years old, I was taking photos of a tree when a family friend told me I should take pictures of people instead. \n\n“When you’re older, you won’t be worried about remembering that tree,” he said. “You’ll want to remember your friends.”\n\nI have been thinking about this sentiment in relation to yesterday’s post, because who really cares what I have to say about the bond market? I don’t even care what I have to say about the bond market.\n\nSo yesterday I took a Lime bike to G’s to wish him a happy birthday. I intended to buy a Birthday Cake Meal Deal sandwich but the Farringdon Tesco didn’t have one. As soon as I’d unlocked the bike it began to rain, and I had my laptop in the front basket, and by the time I got to London Fields it was very wet and so was I, and felt quite pissed off, because I hadn’t really seen anyone in a while and when I did it rained and the rain put me in a bad mood and then I soon left. And Tesco did not have the Birthday Cake Sandwich, which deprived me of a funny prop and also I wanted to know what the Tesco Birthday Cake Sandwich contained and now perhaps I will never know. Actually I just looked it up and it contains “full fat soft cheese, seedless strawberry jam, multi-coloured edible sugar decorations and vanilla frosting in brioche style white bread.” Sounds disgusting."
+    },
+    {
         "id": "1756328075570",
         "title": "bonds",
         "date": "2025-08-27",
