@@ -4,6 +4,12 @@
 
 let blogPosts = [
     {
+        "id": "1756489533203",
+        "title": "public",
+        "date": "2025-08-29",
+        "content": "Very low energy today. I have been thinking about AI investment, though. \n\nIt’s such a huge glut of capital that tells you a lot. The big progressive 2016 wave was based a lot around supply-side reform, and the big idea was the Green New Deal. A lot of people said it was a crazy amount of money. But a lot more money has gone into AI, chip manufacturers etc. \n\nOne way you can think of this: big spending on “public” projects actually happens through money creation and QE-type mechanisms now. If a government said it was going to borrow a lot of money for development purposes its bond yields would likely hit the roof. But a government can take a series of steps to expand money supply if they put this into private financial institutions. In the wake of the 2008 crisis and then over the following decade this happened on a grand scale. It makes me feel insane because if you follow this logic far enough you end up concluding that a16z, Sequoia, Founders Fund and the like are all essentially equivalent to the government agencies that distributed public money for the New Deal. \n\nAnd so AI, when you look at it through this lens, which I admit is like one of those lenses they use when you’re getting an eye test in the opticians to gauge your level of vision impairment, is a public project."
+    },
+    {
         "id": "1756452319632",
         "title": "11",
         "date": "2025-08-28",
